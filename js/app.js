@@ -77,6 +77,7 @@ function scrollTitle(name, scrollPosition){
     const nameHeight = name.clientHeight;
     const namePosition = name.getBoundingClientRect().top;
     if(scrollPosition > namePosition){
+        titleWelcome.classList.add('active')
         titleWelcome.style.setProperty('--scroll-Title', (namePosition + 180) / nameHeight );
     }
 
@@ -201,18 +202,20 @@ function scrollArt(name, scrollPositionDiv){
 //  Load
 function work() { 
     
+window.addEventListener();
+musicActive();
 }
 
 if (document.readyState == 'loading') {
-  // cargando todavía, esperar el evento
+  
   document.addEventListener('DOMContentLoaded', work);
 } else {
   // DOM está listo!
   work();
 }
 
-window.addEventListener("DOMContentLoaded", (event) => {
-    titleWelcome.style.fontSize = "20rem";
+window.addEventListener("DOMContentLoaded", (event) => { 
+    titleWelcome.style.setProperty('--scroll-Title', (namePosition + 180) / nameHeight );
 });
 
 
@@ -227,6 +230,4 @@ function musicActive(){
             music.classList.remove('active')
         }
         }
-}musicActive()
-
-window.addEventListener()
+}

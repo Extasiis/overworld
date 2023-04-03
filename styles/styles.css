@@ -115,11 +115,15 @@ body::after{
 /*  */
 .welcome__title{
     opacity: calc(var(--scroll-Title) * 15);
-    font-size: calc( 120rem * var(--scroll-Title));
+    font-size: 15rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     letter-spacing: 3px;   
     z-index: 1;
+}
+
+.welcome__title.active{
+    font-size: calc( 120rem * var(--scroll-Title));
 }
 
 .welcome__music-title{
